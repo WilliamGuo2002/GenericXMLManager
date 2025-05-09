@@ -30,13 +30,7 @@ xml.etree.ElementTree and minidom for XML parsing and formatting
 Packaged with PyInstaller for distribution
 
 📁 Structure
-project-root/
-├── data/                # Contains XML files (not included in repo)
-│   ├── SRRC_Data.xml
-│   ├── SRRC_EngineerInfo.xml
-│   └── ...
-├── SRRCDataBrowser.py   # Main application file
-└── README.md
+
 
 📦 Packaging & Distribution
 Built using PyInstaller:
