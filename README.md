@@ -1,48 +1,50 @@
 # GenericXMLManager
 A lightweight Python GUI tool for managing and editing structured XML datasets
-📂 General XML Database Controller
-A user-friendly Python desktop application for managing structured XML datasets with tabular interfaces. Designed to support read, edit, add, delete, and filter operations across multiple XML tables.
 
-🔧 Features
-GUI-based data management for multiple XML tables
+🗂️ Universal XML Database Controller
+A desktop application built with Python for managing structured XML files through a user-friendly table interface. Ideal for general-purpose use across various domains involving XML data.
 
-Real-time editing, adding, and deleting of XML nodes
+✨ Features
+Tabular display of XML datasets
 
-Support for GB2312 encoding (e.g., Chinese datasets)
+Add, delete, and edit records with real-time GUI interaction
 
-Dropdown menus dynamically populated from related tables
+Batch record addition with dropdown field population
 
-Filter and search functionality (e.g., by EmployeeID, ItemID)
+Filter and search capabilities for specific fields
 
-Batch addition support for summary tables
+Supports saving back to original XML with formatting
 
-Safe saving and XML pretty-print formatting
+Customizable table names and structure
 
-Designed to be repurposable for any structured XML schema
+Designed for extensibility and portability
 
-🧪 Tech Stack
+🛠️ Tech Stack
 Python 3.9+
 
-tkinter (built-in GUI)
+tkinter for GUI
 
-xml.etree.ElementTree and minidom for XML parsing and formatting
+xml.etree.ElementTree, minidom for XML processing
 
-Packaged with PyInstaller for distribution
+Packaged using PyInstaller
 
-📁 Structure
+📦 File Structure
+your-project/
+├── data/                  # Place your XML files here
+├── XMLDatabaseApp.py      # Main application
+└── README.md
 
+🚀 How to Use
+Place your structured XML files in the data/ folder
 
-📦 Packaging & Distribution
-Built using PyInstaller:
-pyinstaller --noconsole --add-data "data;data" SRRCDataBrowser.py
-The executable works as long as the data/ folder is in the same directory.
+Launch the application via Python or use the packaged .exe
 
-💡 Customization
-To generalize:
+Interact with tables, perform edits, and save changes
 
-Rename XML files and table labels to Table1, Table2, etc.
+📦 Packaging (Windows)
+If you want to share the application as an executable:
+pyinstaller --noconsole --add-data "data;data" XMLDatabaseApp.py
+Make sure the data/ folder stays alongside the .exe file.
 
-Update code logic to reflect your schema.
-
-📃 License
-This project is licensed under the MIT License.
+📄 License
+MIT License – free to use and modify.
