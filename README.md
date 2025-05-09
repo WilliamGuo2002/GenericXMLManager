@@ -91,7 +91,6 @@ your-project/
 
 如需将项目打包为 `.exe` 可执行程序：
 
-```bash
 pyinstaller --noconsole --add-data "data;data" XMLDatabaseApp.py
 
 ⚠️ 请确保打包后的 .exe 文件与 data/ 文件夹处于同一目录。
