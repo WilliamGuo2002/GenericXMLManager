@@ -1,13 +1,12 @@
 import tkinter as tk
-from tkinter import ttk, filedialog, messagebox
+from tkinter import ttk, messagebox
 import os
 import xml.etree.ElementTree as ET
-import codecs
 
-class XMLManager(tk.Tk):
+class XMLDatabaseBrowser(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("XML Manager")
+        self.title("XML Database Browser")
         self.geometry("1200x800")
 
         self.data_folder = "data"
@@ -51,9 +50,8 @@ class XMLManager(tk.Tk):
     def load_table_data(self, filename):
         path = os.path.join(self.data_folder, filename)
         try:
-            with codecs.open(path, "r", encoding="utf-8", errors="replace") as f:
-                xml_content = f.read()
-            root = ET.fromstring(xml_content)
+            tree = ET.parse(path)
+            root = tree.getroot()
             entries = list(root)
             if not entries:
                 self.columns = []
@@ -77,25 +75,7 @@ class XMLManager(tk.Tk):
             self.tree.insert("", "end", values=row)
 
     def add_record(self):
-        if not self.columns:
-            messagebox.showwarning("Warning", "No file loaded or file is empty.")
-            return
-        top = tk.Toplevel(self)
-        top.title("Add Record")
-        entries = {}
-        for i, col in enumerate(self.columns):
-            tk.Label(top, text=col).grid(row=i, column=0, padx=10, pady=5)
-            var = tk.StringVar()
-            tk.Entry(top, textvariable=var).grid(row=i, column=1, padx=10, pady=5)
-            entries[col] = var
-
-        def submit():
-            new_row = [entries[col].get() for col in self.columns]
-            self.all_data.append(new_row)
-            self.refresh_table()
-            top.destroy()
-
-        tk.Button(top, text="Submit", command=submit).grid(row=len(self.columns), column=1, pady=10)
+        messagebox.showinfo("Info", "Add function will be implemented in step 2.")
 
     def delete_record(self):
         selected = self.tree.selection()
@@ -113,12 +93,11 @@ class XMLManager(tk.Tk):
         root = ET.Element("Data")
         for row in self.all_data:
             ET.SubElement(root, "Entry", attrib={col: val for col, val in zip(self.columns, row)})
-        path = os.path.join(self.data_folder, self.current_file)
         tree = ET.ElementTree(root)
+        path = os.path.join(self.data_folder, self.current_file)
         tree.write(path, encoding="utf-8", xml_declaration=True)
         messagebox.showinfo("Saved", f"Data saved to {self.current_file}")
 
 if __name__ == "__main__":
-    app = XMLManager()
+    app = XMLDatabaseBrowser()
     app.mainloop()
-
