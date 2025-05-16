@@ -101,8 +101,6 @@ class XMLDatabaseBrowser(tk.Tk):
     # 在现有 XMLDatabaseBrowser_step1 基础上，增加通用添加功能
 
 # 直接补全 add_record 函数
-
-add_record_code = 
     def add_record(self):
         if not self.columns:
             messagebox.showwarning("Warning", "No file loaded or file is empty.")
@@ -132,21 +130,43 @@ add_record_code =
 
         tk.Button(top, text="Submit", command=submit).grid(row=len(self.columns), column=1, pady=10, sticky='e')
 
+    def delete_record(self):
+        selected = self.tree.selection()
+        if not selected:
+            return
+        if not messagebox.askyesno("Confirm Delete", f"Are you sure you want to delete {len(selected)} record(s)?"):
+            return
+        for item in selected:
+            row = self.tree.item(item, "values")
+            if row in self.all_data:
+                self.all_data.remove(list(row))
+        self.refresh_table()
 
-# 替换并保存到新的文件
-with open("/mnt/data/XMLDatabaseBrowser_step2.py", "w", encoding="utf-8") as f:
-    with open("/mnt/data/XMLDatabaseBrowser_step1.py", "r", encoding="utf-8") as base:
-        content = base.read()
-        # 用新的 add_record 替换原函数
-        content = content.replace(
-            'def add_record(self):\n        messagebox.showinfo("Info", "Add function will be implemented in step 2.")',
-            add_record_code.strip()
-        )
-        f.write(content)
+    def save_data(self):
+        if not self.current_file:
+            return
+        root = ET.Element("Data")
+        for row in self.all_data:
+            ET.SubElement(root, "Entry", attrib={col: val for col, val in zip(self.columns, row)})
+        tree = ET.ElementTree(root)
+        path = os.path.join(self.data_folder, self.current_file)
+        try:
+            tree.write(path, encoding="utf-8", xml_declaration=True, short_empty_elements=False)
+            # 美化缩进
+            self.prettify_xml(path)
+            messagebox.showinfo("Saved", f"Data saved to {self.current_file}")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to save XML: {e}")
 
-"/mnt/data/XMLDatabaseBrowser_step2.py"
-
-        
+    def prettify_xml(self, file_path):
+        try:
+            import xml.dom.minidom
+            dom = xml.dom.minidom.parse(file_path)
+            pretty_xml_as_string = dom.toprettyxml(indent="  ", encoding="utf-8")
+            with open(file_path, "wb") as f:
+                f.write(pretty_xml_as_string)
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to prettify XML: {e}")
 
 if __name__ == "__main__":
     app = XMLDatabaseBrowser()
