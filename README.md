@@ -31,7 +31,8 @@ Packaged using PyInstaller
 📦 File Structure
 your-project/
 ├── data/                  # Place your XML files here
-├── XMLDatabaseApp.py      # Main application
+├── word/                  # Place your word files here
+├── XMLManagerCode.py      # Main application
 └── README.md
 
 🚀 How to Use
@@ -78,7 +79,8 @@ MIT License – free to use and modify.
 ## 📁 项目结构
 your-project/
 ├── data/ # 请将 XML 文件放置在此文件夹中
-├── XMLDatabaseApp.py # 主程序文件
+├── word/ # 请将 word 文件放置在此文件夹中
+├── XMLManagerCode.py # 主程序文件
 └── README.md
 
 ## 🚀 使用方式
