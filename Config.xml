@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="gb2312"?>
 <Config>
-	<Data_Info>
-		<File Path="C:\data" />
-		<File Path="C:\data" />
-		<File Path="C:\data" />
-		<File Path="C:\data" />
-	</Data_Info>
-	<Word_Info>
-		<File Path="C:\word" />
-		<File Path="C:\word" />
-		<File Path="C:\word" />
-		<File Path="C:\word" />
-		<File Path="C:\word" />
-		<File Path="C:\word" />
-		<File Path="C:\word" />
-		<File Path="C:\word" />
-	</Word_Info>
+  <Data_Info>
+	  <File Name="Data1.xml" Path="paste your file path here" />
+      <File Name="Data2.xml" Path="paste your file path here" />
+      <File Name="Data3.xml" Path="paste your file path here" />
+      <File Name="Data4.xml" Path="paste your file path here" />
+	  <File Name="Data5.xml" Path="paste your file path here" />
+	  <File Name="Data6.xml" Path="paste your file path here" />
+  </Data_Info>
+  <Word_Info>
+      <File Path="paste your file path here" />
+	  <File Path="paste your file path here" />
+	  <File Path="paste your file path here" />
+	  <File Path="paste your file path here" />
+	  <File Path="paste your file path here" />
+	  <File Path="paste your file path here" />
+	  <File Path="paste your file path here" />
+  </Word_Info>
 </Config>
