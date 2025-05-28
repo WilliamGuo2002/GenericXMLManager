@@ -30,8 +30,7 @@ Packaged using PyInstaller
 
 📦 File Structure
 your-project/
-├── data/                  # Place your XML files here
-├── word/                  # Place your word files here
+├── config.xml                 # Stores path of all data files and word files
 ├── XMLManagerCode.py      # Main application
 └── README.md
 
@@ -78,8 +77,7 @@ MIT License – free to use and modify.
 
 ## 📁 项目结构
 your-project/
-├── data/ # 请将 XML 文件放置在此文件夹中
-├── word/ # 请将 word 文件放置在此文件夹中
+├── config.xml # 该文件储存所有程序中的数据文件和文档文件的路径
 ├── XMLManagerCode.py # 主程序文件
 └── README.md
 
