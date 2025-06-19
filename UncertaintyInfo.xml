@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Data>
+  <UncertaintyInfo_Info>
+    <Uncertainty Name="U1" Description="abcdefg" Value="1"/>
+	<Uncertainty Name="U2" Description="abcdefg" Value="2"/>
+	<Uncertainty Name="U3" Description="abcdefg" Value="3"/>
+	<Uncertainty Name="U4" Description="abcdefg" Value="4"/>
+	<Uncertainty Name="U5" Description="abcdefg" Value="5"/>
+	<Uncertainty Name="U6" Description="abcdefg" Value="6"/>
+  </UncertaintyInfo_Info>
+</Data>
