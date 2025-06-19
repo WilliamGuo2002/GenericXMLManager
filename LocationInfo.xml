@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="gb2312"?>
+<Data>
+  <Location_Info>
+    <!--Keep This Format-->
+    <Location LocationID="TO1" Address="Toronto office 1"  Type="Office" Function="func1"/>
+    <Location LocationID="TO2" Address="Toronto office 2"  Type="Office" Function="func2"/>
+    <Location LocationID="TO3" Address="Toronto office 3"  Type="Office" Function="func3"/>
+    <Location LocationID="TL1" Address="Toronto lab 1"  Type="Lab" Function="func4"/>
+    <Location LocationID="TL2" Address="Toronto lab 2"  Type="Lab" Function="func5"/>
+    <Location LocationID="VO1" Address="Vancouver office 1"  Type="Office" Function="func6"/>
+    <Location LocationID="VO2" Address="Vancouver office 2"  Type="Office" Function="func7"/>
+    <Location LocationID="VO3" Address="Vancouver office 3"  Type="Office" Function="func8"/>
+    <Location LocationID="ML1" Address="Montreal lab 1"  Type="Lab" Function="func9"/>
+    <Location LocationID="ML2" Address="Montreal lab 2"  Type="Lab" Function="func10"/>
+    <Location LocationID="ML3" Address="Montreal lab 3"  Type="Lab" Function="func11"/>
+  </Location_Info>
+</Data>
