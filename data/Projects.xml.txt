@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Data>
-    <Entry ProjectID="P001" ProjectName="Alpha" Status="In Progress" Owner="Alice"/>
-    <Entry ProjectID="P002" ProjectName="Beta" Status="Completed" Owner="Bob"/>
-    <Entry ProjectID="P003" ProjectName="Gamma" Status="Planned" Owner="Carol"/>
-</Data>

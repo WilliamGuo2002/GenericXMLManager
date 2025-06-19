@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Data>
-    <Entry SerialNumber="D1001" Name="Printer A" Model="HP LaserJet 200" Location="Office 101"/>
-    <Entry SerialNumber="D1002" Name="Scanner B" Model="Canon ScanX" Location="Office 102"/>
-    <Entry SerialNumber="D1003" Name="Laptop C" Model="Dell XPS 15" Location="Remote"/>
-</Data>

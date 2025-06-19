@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Data>
-    <Entry ID="E001" Name="Alice" Department="Engineering" Position="Developer"/>
-    <Entry ID="E002" Name="Bob" Department="Sales" Position="Manager"/>
-    <Entry ID="E003" Name="Carol" Department="HR" Position="Recruiter"/>
-</Data>
