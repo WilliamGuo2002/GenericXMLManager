@@ -799,7 +799,7 @@ class DatabaseBrowser(tk.Tk):
             else:
                 # 保存到自己的文件
                 tag_map = {
-                    "Employee Data": ("Engineer_Info", "Engineer"),
+                    "Engineer Data": ("Engineer_Info", "Engineer"),
                     "Instrument Data": ("Instrument_Info", "Instrument"),
                     "Location Data": ("Location_Info", "Location"),
                     "Project Data": ("TestItem_Info", "TestItem")
@@ -1425,7 +1425,7 @@ def prettify_xml(elem):
     # 保存的时候再添加一遍注释
     comment_map = {
         'TestItem_Info': '<!--Keep This Format-->',
-        'Engineer_Info': '<!--Keep This Format-->',
+        'Employee_Info': '<!--Keep This Format-->',
         'Location_Info': '<!--Keep This Format-->',
         'Instrument_Info': '<!--Keep This Format-->',
         'Summary_Info': '<!--Keep This Format-->'
