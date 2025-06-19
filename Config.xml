@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="gb2312"?>
 <Config>
   <Data_Info>
-	  <File Name="Data1.xml" Path="paste your file path here" />
-      <File Name="Data2.xml" Path="paste your file path here" />
-      <File Name="Data3.xml" Path="paste your file path here" />
-      <File Name="Data4.xml" Path="paste your file path here" />
-	  <File Name="Data5.xml" Path="paste your file path here" />
-	  <File Name="Data6.xml" Path="paste your file path here" />
+	  <File Name="Data.xml" Path="your path here" />
+      <File Name="EmployeeInfo.xml" Path="your path here" />
+      <File Name="InstrumentInfo.xml" Path="your path here" />
+      <File Name="LocationInfo.xml" Path="your path here" />
+	  <File Name="TestItemInfo.xml" Path="your path here" />
+	  <File Name="UncertaintyInfo.xml" Path="your path here" />
   </Data_Info>
   <Word_Info>
-      <File Path="paste your file path here" />
-	  <File Path="paste your file path here" />
-	  <File Path="paste your file path here" />
-	  <File Path="paste your file path here" />
-	  <File Path="paste your file path here" />
-	  <File Path="paste your file path here" />
-	  <File Path="paste your file path here" />
+      <File Path="your path here" />
+	  <File Path="your path here" />
+	  <File Path="your path here" />
+	  <File Path="your path here" />
+	  <File Path="your path here" />
+	  <File Path="your path here" />
+	  <File Path="your path here" />
   </Word_Info>
 </Config>
