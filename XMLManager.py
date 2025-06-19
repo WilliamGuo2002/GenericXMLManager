@@ -285,16 +285,16 @@ class DatabaseBrowser(tk.Tk):
             self.rescan_button.pack_forget()
 
         if table_name == "Summary Data":
-            self.engineer_info = {e.attrib["EmployeeID"]: e.attrib.get("Name", "") for e in self.load_xml_root("SRRC_EngineerInfo.xml").findall(".//Engineer")}
-            self.item_info = {i.attrib["ItemID"]: i.attrib.get("ItemName", "") for i in self.load_xml_root("SRRC_TestItemInfo.xml").findall(".//TestItem")}
-            self.instrument_info = {ins.attrib["SerialNo"]: f'{ins.attrib.get("Name", "")} / {ins.attrib.get("Model", "")}' for ins in self.load_xml_root("SRRC_InstrumentInfo.xml").findall(".//Instrument")}
-            self.location_info = {loc.attrib["LocationID"]: loc.attrib.get("Address", "") for loc in self.load_xml_root("SRRC_LocationInfo.xml").findall(".//Location")}
+            self.engineer_info = {e.attrib["EmployeeID"]: e.attrib.get("Name", "") for e in self.load_xml_root("EngineerInfo.xml").findall(".//Engineer")}
+            self.item_info = {i.attrib["ItemID"]: i.attrib.get("ItemName", "") for i in self.load_xml_root("TestItemInfo.xml").findall(".//TestItem")}
+            self.instrument_info = {ins.attrib["SerialNo"]: f'{ins.attrib.get("Name", "")} / {ins.attrib.get("Model", "")}' for ins in self.load_xml_root("InstrumentInfo.xml").findall(".//Instrument")}
+            self.location_info = {loc.attrib["LocationID"]: loc.attrib.get("Address", "") for loc in self.load_xml_root("LocationInfo.xml").findall(".//Location")}
             self.update_summary_filters()
         self.show_filtered_data(self.all_data)
 
         if table_name == "Summary Data":
-            employee_ids = self.extract_attributes_from_xml("SRRC_Data.xml", "Summary", "EmployeeID")
-            item_ids = self.extract_attributes_from_xml("SRRC_Data.xml", "Summary", "ItemID")
+            employee_ids = self.extract_attributes_from_xml("Data.xml", "Summary", "EmployeeID")
+            item_ids = self.extract_attributes_from_xml("Data.xml", "Summary", "ItemID")
 
             display_employee_list = [self.get_employee_display(eid) for eid in employee_ids]
             display_item_list = [self.get_item_display(iid) for iid in item_ids]
@@ -780,7 +780,7 @@ class DatabaseBrowser(tk.Tk):
                     f.write(prettify_xml(root))
 
             elif table_name == "Uncertainty Data":
-                root_tag = "SRRC_UncertaintyInfo"
+                root_tag = "UncertaintyInfo"
                 outer_tag = "UncertaintyInfo_Info"
                 item_tag = "Uncertainty"
 
@@ -806,7 +806,7 @@ class DatabaseBrowser(tk.Tk):
                 }
 
                 outer_tag, item_tag = tag_map[table_name]
-                root_tag = os.path.splitext(os.path.basename(path))[0]  # e.g. "SRRC_EngineerInfo"
+                root_tag = os.path.splitext(os.path.basename(path))[0]  # e.g. "EngineerInfo"
 
                 outer_elem = ET.Element(outer_tag)
                 for row in self.all_data:
